@@ -1,0 +1,47 @@
+<div class="jumbotron" [hidden]="!showStep6">
+  <table class="table table-sm table-light">
+    <thead>
+      <tr>
+        <th scope="col">Risk Defense Platform results</th>
+        <th scope="col">RDP Fields</th>
+        <th scope="col">Next Step</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Verification Status: Pass</th>
+        <td></td>
+        <td><button class="btn btn-primary" (click)="click7()">click here.</button></td>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="6">Verification Status: Fail</th>
+        <td>SsnFullNameMatch: fail</td>
+        <td rowspan="4"><button class="btn btn-primary" (click)="click8()">click here.</button></td>
+      </tr>
+      <tr>
+        <td>SssDeathMatchVerification: fail</td>
+      </tr>
+      <tr>
+        <td>IdentityOccupancyVerified: fail</td>
+      </tr>
+      <tr>
+        <td>DriversLicenseVerification: fail</td>
+      </tr>
+      <tr>
+        <td>If the consumer did not fail any of the fields above</td>
+        <td><button class="btn btn-primary" (click)="click7()">click here.</button></td>
+      </tr>
+      <tr>
+        <th scope="row">RDP Failure. Can't match data to a known consumer</th>
+        <td><button class="btn btn-primary" (click)="click8()">click here.</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<app-step7 [hidden]="!showStep7"></app-step7>
+<app-step8 [hidden]="!showStep8"></app-step8>
+<div class="jumbotron" [hidden]="showStep6">
+  <button [hidden]="showStep6" type="button" (click)="click6()" class="btn btn-info btn-lg btn-block">Back to
+    choices</button>
+</div>

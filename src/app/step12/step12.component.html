@@ -1,0 +1,67 @@
+<div class="jumbotron">
+  <h1 class="display-6">Send CC23 letter</h1>
+  <hr class="my-4">
+  <!-- <p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#collapseExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#collapseExample1">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Go to Reports Tab</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Under Multi Select, click CC23 Need
+        additional information (Non authenticated user)</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Request Channel: Phone</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Date Received: Today</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Note Type: General Note</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Note: CC23 sent</p>
+      <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Click Order Letters</p>
+    </div>
+  </div>
+  <div class="collapse" id="collapseExample1">
+    <div class="card card-body">
+      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+      keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    </div>
+  </div> -->
+  <p>
+    <button type="button" class="btn btn-primary" (click)="collapse.toggle()"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      MBS
+    </button>
+    <button type="button" class="btn btn-primary ms-2" (click)="isCollapsed = ! isCollapsed"
+      [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+      Setting expectations
+    </button>
+  </p>
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Go to Reports Tab</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Under Multi Select, click CC23 Need
+          additional information (Non authenticated user)</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Request Channel: Phone</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Date Received: Today</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Note Type: General Note</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Note: CC23 sent</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Click Order Letters</p>
+      </div>
+    </div>
+  </div>
+  <div #collapse="ngbCollapse" [(ngbCollapse)]="!isCollapsed">
+    <div class="card">
+      <div class="card-body">
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Inform consumer that we cannot process
+          their request unless we receive the supporting document/s required.</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Advise to call us back once they sent
+          the supporting document/s.</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o The CC23 Need additional information
+          letter will be sent by mail.</p>
+        <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o Delivery timeframe is within 7-10
+          business days.</p>
+      </div>
+    </div>
+  </div>

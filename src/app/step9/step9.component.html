@@ -1,0 +1,16 @@
+<div class="jumbotron" [hidden]="!showStep9">
+  <h1 class="display-6">Determine next steps</h1>
+  <hr class="my-4">
+  <!-- <p>-	In MBS, go to Applications > Consumer Disclosure 3.0</p> -->
+  <p class="lead">-	If the consumer sends the supporting documents while the call is still active,
+    <button class="btn btn-primary"
+    (click)="click10()">click here.</button></p>
+  <p class="lead">-	If the consumer did not send the supporting documents while the call is active,  
+    <button class="btn btn-primary"
+    (click)="click11()">click here.</button></p>
+</div>
+<app-step10 [hidden]="!showStep10"></app-step10>
+<app-step11 [hidden]="!showStep11"></app-step11>
+<div class="jumbotron" [hidden]="showStep9">
+  <button [hidden]="showStep9" type="button" (click)="click9()"  class="btn btn-info btn-lg btn-block">Back to choices</button>
+</div>
