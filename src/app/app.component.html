@@ -1,4 +1,4 @@
-<app-top-nav></app-top-nav>
+<div class="container">
   <div id="stepper1" class="bs-stepper">
     <div class="bs-stepper-header">
       <div class="step" data-target="#test-l-1">
@@ -51,33 +51,37 @@
         </div>
         <div id="test-l-2" class="content">
           <app-step2></app-step2>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> | 
+          <button (click)="prev()" class="btn btn-primary">Previous</button> |
           <button (click)="next()" class="btn btn-primary">Next</button>
         </div>
         <div id="test-l-3" class="content">
           <app-step3></app-step3>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> | 
+          <br>
+          <button (click)="prev()" class="btn btn-primary">Previous</button> |
           <button (click)="next()" class="btn btn-primary">Next</button>
         </div>
         <div id="test-l-6" class="content">
           <app-step6></app-step6>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> | 
+          <br>
+          <button (click)="prev()" class="btn btn-primary">Previous</button> |
           <button (click)="next()" class="btn btn-primary">Next</button>
         </div>
         <div id="test-l-9" class="content">
           <app-step9></app-step9>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> | 
+          <br>
+          <button (click)="prev()" class="btn btn-primary">Previous</button> |
           <button (click)="next()" class="btn btn-primary">Next</button>
         </div>
         <div id="test-l-12" class="content">
-       
           <app-step12></app-step12>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> | 
+          <button (click)="prev()" class="btn btn-primary">Previous</button> |
           <button (click)="startOver()" class="btn btn-success">Start over</button>
         </div>
         <!-- <div id="test-l-3" class="content text-center">
-          <button type="submit" class="btn btn-primary mt-5">Submit</button>
-        </div> -->
+            <button type="submit" class="btn btn-primary mt-5">Submit</button>
+          </div> -->
       </form>
     </div>
+  </div>
+
 </div>

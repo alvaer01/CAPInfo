@@ -14,7 +14,7 @@
         <td><button class="btn btn-primary" (click)="click7()">click here.</button></td>
       </tr>
       <tr>
-        <th scope="row" rowspan="6">Verification Status: Fail</th>
+        <th scope="row" rowspan="5">Verification Status: Fail</th>
         <td>SsnFullNameMatch: fail</td>
         <td rowspan="4"><button class="btn btn-primary" (click)="click8()">click here.</button></td>
       </tr>
@@ -33,6 +33,7 @@
       </tr>
       <tr>
         <th scope="row">RDP Failure. Can't match data to a known consumer</th>
+        <td></td>
         <td><button class="btn btn-primary" (click)="click8()">click here.</button></td>
       </tr>
 
@@ -41,7 +42,7 @@
 </div>
 <app-step7 [hidden]="!showStep7"></app-step7>
 <app-step8 [hidden]="!showStep8"></app-step8>
-<div class="jumbotron" [hidden]="showStep6">
+<div class="container" [hidden]="showStep6">
   <button [hidden]="showStep6" type="button" (click)="click6()" class="btn btn-info btn-lg btn-block">Back to
     choices</button>
 </div>
