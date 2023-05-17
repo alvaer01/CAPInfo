@@ -1,1 +1,88 @@
-<p>authenticating-consumer works!</p>
+<div class="container">
+    <div id="stepper1" class="bs-stepper">
+      <div class="bs-stepper-header">
+        <div class="step" data-target="#test-l-1">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">1</span>
+            <span class="bs-stepper-label">Step 1</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-2">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">2</span>
+            <span class="bs-stepper-label">Step 2</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-3">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">3</span>
+            <span class="bs-stepper-label">Step 3</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-6">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">4</span>
+            <span class="bs-stepper-label">Step 4</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-9">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">5</span>
+            <span class="bs-stepper-label">Step 5</span>
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-target="#test-l-12">
+          <button class="step-trigger">
+            <span class="bs-stepper-circle">6</span>
+            <span class="bs-stepper-label">Step 6</span>
+          </button>
+        </div>
+      </div>
+      <div class="bs-stepper-content">
+        <form (ngSubmit)="onSubmit()">
+          <div id="test-l-1" class="content">
+            <app-step1></app-step1>
+            <button (click)="next()" class="btn btn-primary">Proceed to next Step</button>
+          </div>
+          <div id="test-l-2" class="content">
+            <app-step2></app-step2>
+            <button (click)="prev()" class="btn btn-primary">Previous</button> |
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          <div id="test-l-3" class="content">
+            <app-step3></app-step3>
+            <br>
+            <button (click)="prev()" class="btn btn-primary">Previous</button> |
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          <div id="test-l-6" class="content">
+            <app-step6></app-step6>
+            <br>
+            <button (click)="prev()" class="btn btn-primary">Previous</button> |
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          <div id="test-l-9" class="content">
+            <app-step9></app-step9>
+            <br>
+            <button (click)="prev()" class="btn btn-primary">Previous</button> |
+            <button (click)="next()" class="btn btn-primary">Next</button>
+          </div>
+          <div id="test-l-12" class="content">
+            <app-step12></app-step12>
+            <button (click)="prev()" class="btn btn-primary">Previous</button> |
+            <button (click)="startOver()" class="btn btn-success">Start over</button>
+          </div>
+          <!-- <div id="test-l-3" class="content text-center">
+              <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </div> -->
+        </form>
+      </div>
+    </div>
+  
+  </div>
+  

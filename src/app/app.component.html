@@ -1,87 +1,150 @@
+<br>
 <div class="container">
-  <div id="stepper1" class="bs-stepper">
-    <div class="bs-stepper-header">
-      <div class="step" data-target="#test-l-1">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">1</span>
-          <span class="bs-stepper-label">Step 1</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-2">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">2</span>
-          <span class="bs-stepper-label">Step 2</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-3">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">3</span>
-          <span class="bs-stepper-label">Step 3</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-6">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">4</span>
-          <span class="bs-stepper-label">Step 4</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-9">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">5</span>
-          <span class="bs-stepper-label">Step 5</span>
-        </button>
-      </div>
-      <div class="line"></div>
-      <div class="step" data-target="#test-l-12">
-        <button class="step-trigger">
-          <span class="bs-stepper-circle">6</span>
-          <span class="bs-stepper-label">Step 6</span>
-        </button>
-      </div>
-    </div>
-    <div class="bs-stepper-content">
-      <form (ngSubmit)="onSubmit()">
-        <div id="test-l-1" class="content">
-          <app-step1></app-step1>
-          <button (click)="next()" class="btn btn-primary">Proceed to next Step</button>
-        </div>
-        <div id="test-l-2" class="content">
-          <app-step2></app-step2>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> |
-          <button (click)="next()" class="btn btn-primary">Next</button>
-        </div>
-        <div id="test-l-3" class="content">
-          <app-step3></app-step3>
-          <br>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> |
-          <button (click)="next()" class="btn btn-primary">Next</button>
-        </div>
-        <div id="test-l-6" class="content">
-          <app-step6></app-step6>
-          <br>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> |
-          <button (click)="next()" class="btn btn-primary">Next</button>
-        </div>
-        <div id="test-l-9" class="content">
-          <app-step9></app-step9>
-          <br>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> |
-          <button (click)="next()" class="btn btn-primary">Next</button>
-        </div>
-        <div id="test-l-12" class="content">
-          <app-step12></app-step12>
-          <button (click)="prev()" class="btn btn-primary">Previous</button> |
-          <button (click)="startOver()" class="btn btn-success">Start over</button>
-        </div>
-        <!-- <div id="test-l-3" class="content text-center">
-            <button type="submit" class="btn btn-primary mt-5">Submit</button>
-          </div> -->
-      </form>
-    </div>
-  </div>
+  <input type="text" class="form-control" name="search" id="search" [(ngModel)]="search">
+</div>
+<br>
+<!-- Authentication -->
+<div class="container" *ngIf="search.toLowerCase().includes('auth')">
+  <br>
+  <p class="lead">Authentication</p>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="Authenticating a Consumer">
+      <ng-template ngbPanelContent>
+        <authenticating-consumer></authenticating-consumer>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Manual Authentication">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Authenticating a Small Business (SBAC)">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
 
+<div class="container" *ngIf="search.toLowerCase().includes('dispute')">
+  <br>
+  <!-- Dispute -->
+  <p class="lead">Dispute</p>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="Filing a Dispute (FCRA)">
+      <ng-template ngbPanelContent>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Filing a Clarification (Accurint)">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Filing a Dispute for Expungement">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Filing a Dispute for Small Business (SBAC) Report">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
+
+<div class="container" *ngIf="search.toLowerCase().includes('report')">
+  <br>
+  <!-- Report -->
+  <p class="lead">Report</p>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="Sending a Curious Consumer Package or Static Report">
+      <ng-template ngbPanelContent>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Sending Static Report from 2.0">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Sending Static Report from Insurance Support (IHS) Tool">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Sending Manual Letter">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Sending Accurint or Contact and Locate Report">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Sending Small Business (SBAC) Report">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
+
+<div class="container" *ngIf="search.toLowerCase().includes('security')">
+  <!-- Security Freeze -->
+  <br>
+  <p class="lead">Security Freeze</p>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="Add Security Freeze">
+      <ng-template ngbPanelContent>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Lift Security Freeze">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Reset Security Freeze PIN">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
+
+<div class="container" *ngIf="search.toLowerCase().includes('resources')">
+  <!-- Resources -->
+  <br>
+  <p class="lead">Resources</p>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="Supporting Documents Checklist">
+      <ng-template ngbPanelContent>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Security Freeze Status Check">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="SBAC Authentication - Name, TIN, and Address">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="SBAC Authentication - Caller's Assocation">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Create RNW Ticket">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Derive SPII">
+      <ng-template ngbPanelContent>
+        <!-- <authenticating-consumer></authenticating-consumer> -->
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
 </div>
